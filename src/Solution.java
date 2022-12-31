@@ -1,2 +1,21 @@
-package PACKAGE_NAME;public class Solution {
+public class Solution {
+    public static String mergeAlternately(String word1, String word2) {
+        int i = 0;
+        StringBuilder builder = new StringBuilder();
+        while (i < word1.length() && i < word2.length()) {
+            builder.append(word1.charAt(i));
+            builder.append(word2.charAt(i));
+            i++;
+        }
+        while (i < word1.length()) {
+            builder.append(word1.charAt(i));
+            i++;
+        }
+        while (i < word2.length()) {
+            builder.append(word2.charAt(i));
+            i++;
+        }
+
+        return builder.toString();
+    }
 }
